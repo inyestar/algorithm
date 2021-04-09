@@ -2,17 +2,17 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
-import algorithm.annotation.Callee;
+import annotation.Caller;
 
-public class InsertSort extends Callee {
+public class InsertSort extends Caller {
 
-	/*
+	/**
 	 * n과 n-1을 비교하여 n이 더 작으면 n-1로 이동
 	 * n-1보다 크면 앞의 데이터 모두 정렬이 되었다고 가정하고 break;
 	 * 
 	 */
 	@Override
-	public void doCall(int[] arr) {
+	public void call(int[] arr) {
 		
 		for(int i=1; i<arr.length; i++) {
 			for(int j=i; j>0; j--) {

@@ -1,8 +1,8 @@
 package algorithm.recursive;
 
-import algorithm.annotation.Callee;
+import annotation.Caller;
 
-public class Multiply extends Callee{
+public class Multiply extends Caller{
 
 	/**
 	 * n 까지 곱한 값
@@ -27,7 +27,7 @@ public class Multiply extends Callee{
 	}
 
 	@Override
-	public void doCall(int[] arr) {
+	public void call(int[] arr) {
 		int param = arr[0] > 10 ? arr[0] % 10 : arr[0];
 		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result-loop=%d%n", loop(param));
 		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result-recursive=%d%n", recursive(param));
