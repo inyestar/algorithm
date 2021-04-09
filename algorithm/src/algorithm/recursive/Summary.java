@@ -6,7 +6,7 @@ import algorithm.annotation.Callee;
 public class Summary extends Callee{
 
 	/**
-	 * ÀÓÀÇÀÇ ¹è¿­ÀÇ ¿ø¼ÒµéÀÇ ÇÕ
+	 * ì„ì˜ì˜ ë°°ì—´ì˜ ì›ì†Œë“¤ì˜ í•©
 	 * @param args
 	 */
 	int loop(int[] arr) {
