@@ -7,8 +7,8 @@ import algorithm.annotation.Callee;
 public class BubbleSort extends Callee{
 
 	/*
-	 * n°ú n+1À» ºñ±³ÇÏ¿© nÀÌ n+1º¸´Ù Å©¸é swap
-	 * ¸¶Áö¸·ÀÇ Å« ¼ýÀÚºÎÅÍ Á¤·ÄÀÌ µÇ±â ¶§¹®¿¡ ºñ±³ ´ë»óÀÎ ¹è¿­ÀÇ Å©±â°¡ -i ¸¸Å­ ÁÙ¾îµé°Ô µÊ
+	 * nê³¼ n+1ì„ ë¹„êµí•˜ì—¬ nì´ n+1ë³´ë‹¤ í¬ë©´ swap
+	 * ë§ˆì§€ë§‰ì˜ í° ìˆ«ìžë¶€í„° ì •ë ¬ì´ ë˜ê¸° ë•Œë¬¸ì— ë¹„êµ ëŒ€ìƒì¸ ë°°ì—´ì˜ í¬ê¸°ê°€ -i ë§Œí¼ ì¤„ì–´ë“¤ê²Œ ë¨
 	 */
 	@Override
 	public void doCall(int[] arr) {

@@ -3,8 +3,8 @@ package algorithm.recursive;
 public class Palindrome {
 	
 	/**
-	 * ¹®ÀÚ¿­À» °Å²Ù·Î ÀĞ¾îµµ ¿øº»°ú µ¿ÀÏÇÑ È¸¹®ÀÎÁö ÆÇ´ÜÇÏ´Â ÇÔ¼ö
-	 * ¿¹) level
+	 * ë¬¸ìì—´ì„ ê±°ê¾¸ë¡œ ì½ì–´ë„ ì›ë³¸ê³¼ ë™ì¼í•œ íšŒë¬¸ì¸ì§€ íŒë‹¨í•˜ëŠ” í•¨ìˆ˜
+	 * ì˜ˆ) level
 	 * @param args
 	 */
 	boolean loop(String org) {

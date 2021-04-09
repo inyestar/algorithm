@@ -12,10 +12,10 @@ public class Fibonacchi {
 	}
 
 	/*
-	 * µ¿Àû °èÈ¹¹ý
-	 * - ¹®Á¦¸¦ ÀÛÀº ´ÜÀ§·Î ºÐÇÒ
-	 * - ÀÛÀº ´ÜÀ§´Â °øÅëºÎºÐÀÌ ÀÖ¾î Áßº¹À¸·Î »ç¿ëµÊ
-	 * - ¸Þ¸ðÁ¦ÀÌ¼Ç ±â¹ý : ÇÑ¹ø °è»êµÈ ÀÛÀº ´ÜÀ§´Â ÀúÀå ÈÄ ´Ù½Ã °è»êÇÏÁö ¾Ê°í »ç¿ë
+	 * ë™ì ê³„íšë²•
+	 * - í° ë¬¸ì œë¥¼ ìž‘ì€ ë¬¸ì œë¡œ ë¶„í• 
+	 * - ë¶„í• ëœ ìž‘ì€ ë¬¸ì œë“¤ì€ ì¤‘ë³µë¨
+	 * - ë©”ëª¨ì œì´ì…˜ ê¸°ë²• : í•œ ë²ˆ ê³„ì‚°ëœ ìž‘ì€ ë¬¸ì œë“¤ì€ ì €ìž¥í•˜ì—¬ ë‹¤ì‹œ ê³„ì‚°í•˜ì§€ ì•Šê³  ì´í›„ ê³„ì‚°ì— ì‚¬ìš©
 	 */
 	int fiboDp(int n) {
 		
@@ -25,12 +25,12 @@ public class Fibonacchi {
 		
 		for(int i=2; i<n+1; i++) {
 			/*
-			 * n == 4 ÀÌ¸é
+			 * n == 4 ì´ë©´
 			 * f(2) = f(1) + f(0)
 			 * f(3) = f(2) + f(1)
 			 * f(4) = f(3) + f(2)
 			 */
-			cache[i] = cache[i-1] + cache[i-2]; // »õ·Î¿î °è»ê¿¡ ¹è¿­¾È¿¡ ÀÖ´Â °ª(ÀÌ¹Ì °è»êµÈ °ª)À» »ç¿ë
+			cache[i] = cache[i-1] + cache[i-2]; // ì´í›„ ê³„ì‚°ì— ì €ìž¥ëœ ê°’(ì´ë¯¸ ê³„ì‚°ëœ ê°’)ì„ ì‚¬ìš©í•˜ê³  ìžˆìŒ
 		}
 		
 		System.out.println(Arrays.toString(cache));

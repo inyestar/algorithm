@@ -5,7 +5,7 @@ import algorithm.annotation.Callee;
 public class Multiply extends Callee{
 
 	/**
-	 * 1ºÎÅÍ n±îÁö °öÇÏ´Â ÇÔ¼ö
+	 * n ê¹Œì§€ ê³±í•œ ê°’
 	 * @param n
 	 * @return
 	 */

@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 /**
- * @Run ¾Ö³ÊÅ×ÀÌ¼ÇÀÌ ºÙÀº Sort ÀÚ½ÄÀ» ½ÇÇàÇÏ´Â Å¬·¡½º
+ * @Run ì• ë„ˆí…Œì´ì…˜ì´ ë¶™ì€ í´ë˜ìŠ¤ë¥¼ ì‹¤í–‰í•˜ëŠ” í´ë˜ìŠ¤
  * @author inye
  *
  */

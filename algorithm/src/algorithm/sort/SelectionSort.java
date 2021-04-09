@@ -7,8 +7,8 @@ import algorithm.annotation.Callee;
 public class SelectionSort extends Callee {
 
 	/*
-	 * аж╬НаЬ ╣╔юлем аъ цж╪р╟╙ю╩ цё╬ф╪╜ ╦г ╬у©║ юж╢б ╣╔юлем©м swap
-	 * ╦г ╬у╨нем а╓╥дюл ╣й
+	 * Лё╪Л√╢Л╖└ К█╟Л²╢М└╟ Л╓▒ Л╣°Л├▄Й╟▓Л²└ Л╟╬Л∙└Л└° К╖╗ Л∙·Л≈░ Л·┬К┼■ К█╟Л²╢М└╟Л≥─ swap
+	 * К╖╗ Л∙·К╤─М└╟ Л═∙К═╛Л²╢ К░╗
 	 */
 	@Override
 	public void doCall(int[] arr) {
