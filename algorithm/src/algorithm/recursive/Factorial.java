@@ -1,10 +1,10 @@
 package algorithm.recursive;
 
-import algorithm.annotation.Callee;
+import annotation.Caller;
 
-public class Factorial extends Callee {
+public class Factorial extends Caller {
 	
-	/*
+	/**
 	 * n!
 	 * 시간 복잡도 : n-1 반복문 호출한 것과 동일하여 O(n-1) > O(n)
 	 * 공간 복잡도 : 함수를 호출할 때 마다 지역변수 n이 생성되므로 O(n)
@@ -21,7 +21,7 @@ public class Factorial extends Callee {
 	}
 	
 	@Override
-	public void doCall(int[] arr) {
+	public void call(int[] arr) {
 		
 		int param = arr[0] > 10 ? 10 : arr[0];
 		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result1=%d%n", recursive1(param));

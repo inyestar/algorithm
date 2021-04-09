@@ -2,8 +2,9 @@ package algorithm.recursive;
 
 import java.util.Arrays;
 
-import algorithm.annotation.Callee;
-public class Summary extends Callee{
+import annotation.Caller;
+
+public class Sum extends Caller{
 
 	/**
 	 * 임의의 배열의 원소들의 합
@@ -27,7 +28,7 @@ public class Summary extends Callee{
 	}
 
 	@Override
-	public void doCall(int[] arr) {
+	public void call(int[] arr) {
 		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result-loop=%d%n", loop(arr));
 		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result-recursive=%d%n", recursive(arr));
 		

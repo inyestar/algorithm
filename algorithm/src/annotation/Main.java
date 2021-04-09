@@ -1,4 +1,4 @@
-package algorithm.annotation;
+package annotation;
 
 import java.io.File;
 import java.lang.annotation.Annotation;
@@ -10,38 +10,41 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.stream.Stream;
 
-/**
- * @Run 애너테이션이 붙은 클래스를 실행하는 클래스
- * @author inye
- *
- */
 public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		
-			Callee call = getInstance();
-			if(call == null) {
+			Caller caller = getInstance();
+			if(caller == null) {
 				throw new ClassNotFoundException("No annotated class");
 			}
 			int[] original = new Random().ints(0, 100).distinct().limit(5).toArray();
-			System.out.printf(">>>>>>>>>>>>>>>>>>>>> Class=%s%n", call.getClass().getName());
+			System.out.printf(">>>>>>>>>>>>>>>>>>>>> Class=%s%n", caller.getClass().getName());
 			System.out.printf(">>>>>>>>>>>>>>>>>>>>> original=%s%n", Arrays.toString(original));
-			call.doCall(original);
+			caller.call(original);
 	}
 	
-	private static Callee getInstance() {
-		Callee sort = null;
+	/**
+	 * Caller를 상속받고 run 애너테이션을 갖고 있는 인스턴스 찾기
+	 * @return
+	 */
+	private static Caller getInstance() {
+		Caller sort = null;
 		try {
 			
 			String root = System.getProperty("java.class.path") + File.separator;
-			Iterator<Path> paths = findByPath(Path.of(root)).iterator();
+			Stream<Path> pathStream = findByPath(Path.of(root));
+			if(pathStream == null) {
+				return sort;
+			}
+			Iterator<Path> paths = pathStream.iterator();
 			while(paths.hasNext()) {
 				File file = paths.next().toFile();
 				String className = file.getAbsolutePath().replace(root, "");
 				Class<?> clazz = Class.forName(className.substring(0, className.indexOf('.')).replace('\\', '.'));
 				for(Annotation ano : clazz.getAnnotations()) {
 					if(ano.annotationType().equals(Run.class)) {
-						sort = (Callee) clazz.getConstructor().newInstance();
+						sort = (Caller) clazz.getConstructor().newInstance();
 						break;
 					}
 				}
@@ -57,6 +60,11 @@ public class Main {
 		return sort;
 	}
 	
+	/**
+	 * Path 아래의 파일 리스트만 출력
+	 * @param dir
+	 * @return
+	 */
 	private static Stream<Path> findByPath(Path dir) {
 		try {
 			return Files.list(dir).flatMap(path -> path.toFile().isDirectory() ? findByPath(path) : Collections.singletonList(path).stream());

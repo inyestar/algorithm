@@ -2,16 +2,16 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
-import algorithm.annotation.Callee;
+import annotation.Caller;
 
-public class BubbleSort extends Callee{
+public class BubbleSort extends Caller{
 
-	/*
+	/**
 	 * n과 n+1을 비교하여 n이 n+1보다 크면 swap
 	 * 마지막의 큰 숫자부터 정렬이 되기 때문에 비교 대상인 배열의 크기가 -i 만큼 줄어들게 됨
 	 */
 	@Override
-	public void doCall(int[] arr) {
+	public void call(int[] arr) {
 		for(int i=0; i<arr.length - 1; i++) {
 			boolean swapped = false;
 			for(int j=0; j<arr.length - 1 - i; j++) {

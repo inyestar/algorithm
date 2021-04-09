@@ -1,8 +1,8 @@
 package algorithm.division;
 
-import java.util.Arrays;
+import annotation.Caller;
 
-public class Fibonacchi {
+public class Fibonacchi extends Caller{
 	
 	int fibo(int n) {
 		if(n <= 1) {
@@ -11,7 +11,7 @@ public class Fibonacchi {
 		return fibo(n-1) + fibo(n-2);
 	}
 
-	/*
+	/**
 	 * 동적계획법
 	 * - 큰 문제를 작은 문제로 분할
 	 * - 분할된 작은 문제들은 중복됨
@@ -33,17 +33,16 @@ public class Fibonacchi {
 			cache[i] = cache[i-1] + cache[i-2]; // 이후 계산에 저장된 값(이미 계산된 값)을 사용하고 있음
 		}
 		
-		System.out.println(Arrays.toString(cache));
+//		System.out.println(Arrays.toString(cache));
 		
 		return cache[n];
 	}
 	
-	public static void main(String[] args) {
-		
-		Fibonacchi dp = new Fibonacchi();
-		System.out.println(dp.fibo(4));
-		System.out.println(dp.fiboDp(4));
-		
+	@Override
+	public void call(int[] arr) {
+		int num = arr[0];
+		int result = fiboDp(num);
+		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result=%s%n", result);
 	}
 
 }
