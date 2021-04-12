@@ -18,7 +18,7 @@ public class Main {
 			if(caller == null) {
 				throw new ClassNotFoundException("No annotated class");
 			}
-			int[] original = new Random().ints(0, 100).distinct().limit(5).toArray();
+			int[] original = new Random().ints(0, 100).distinct().limit(10).toArray();
 			System.out.printf(">>>>>>>>>>>>>>>>>>>>> Class=%s%n", caller.getClass().getName());
 			System.out.printf(">>>>>>>>>>>>>>>>>>>>> original=%s%n", Arrays.toString(original));
 			caller.call(original);
