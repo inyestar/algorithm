@@ -47,7 +47,7 @@ public class QuickSort extends Caller {
 	@Override
 	public void call(int[] arr) {
 		
-		System.out.println(quickSort(Arrays.stream(arr).boxed().collect(Collectors.toList())).toString());
+		System.out.printf(">>>>>>>>>>>>>>>>>>>>> result=%s%n", quickSort(Arrays.stream(arr).boxed().collect(Collectors.toList())).toString());
 	}
 
 }
