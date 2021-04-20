@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import annotation.Caller;
-import annotation.Run;
 
-@Run
 public class MergeSort extends Caller{
 	
 	/**
@@ -21,7 +19,7 @@ public class MergeSort extends Caller{
 	 * @param list
 	 * @return
 	 */
-	private List<Integer> split(List<Integer> list) {
+	public List<Integer> split(List<Integer> list) {
 		
 		// 분리가 불가능한 경우
 		if(list.size() <= 1) {
@@ -52,7 +50,7 @@ public class MergeSort extends Caller{
 	 */
 	private List<Integer> merge(List<Integer> front, List<Integer> back) {
 		
-		System.out.printf("front=%s, back=%s%n", front, back);
+//		System.out.printf("front=%s, back=%s%n", front, back);
 		List<Integer> mergedList = new ArrayList<>();
 		
 		int fp = 0;
