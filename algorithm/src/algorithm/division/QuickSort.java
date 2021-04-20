@@ -8,9 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import annotation.Caller;
-import annotation.Run;
 
-@Run
 public class QuickSort extends Caller {
 
 	/**
