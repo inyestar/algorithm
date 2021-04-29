@@ -24,6 +24,11 @@ public class Stack {
 		offset = 0;
 	}
 	
+	/**
+	 * data는 맨 마지막에 push 됨
+	 * @param data
+	 * @throws StackException
+	 */
 	public void push(int data) throws StackException {
 		if(offset == size) {
 			print();
@@ -33,6 +38,11 @@ public class Stack {
 		stack[offset++] = data;
 	}
 	
+	/**
+	 * 가장 마지막에 추가된 data가 pop됨
+	 * @return
+	 * @throws StackException
+	 */
 	public int pop() throws StackException {
 		
 		if(offset < 0) {
