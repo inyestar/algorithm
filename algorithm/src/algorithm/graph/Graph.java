@@ -1,5 +1,8 @@
 package algorithm.graph;
 
+import java.util.List;
+import java.util.Map;
+
 public interface Graph {
 
 	/*
@@ -8,7 +11,7 @@ public interface Graph {
 	 * ㄴ 간선 : 관계를 나타낸 선
 	 * ㄴ 트리 < 그래프
 	 */
+	void initialize(Map<String, List<String>> dict, String firstNode);
 	
-	
-	void doExecute();
+	List<String> execute();
 }

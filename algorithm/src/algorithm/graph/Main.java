@@ -22,8 +22,13 @@ public class Main {
 		dict.put("J", Arrays.asList("I"));
 		
 		
-		Graph call = new BreadthFirstSearch(dict, "A");
-		call.doExecute();
+		Graph caller1 = new BreadthFirstSearch();
+		caller1.initialize(dict, "A");
+		Graph caller2 = new DepthFirstSearch();
+		caller2.initialize(dict, "A");
+	
+		System.out.println("BFS=" + caller1.execute());
+		System.out.println("DFS=" + caller2.execute());
 	}
 
 }
