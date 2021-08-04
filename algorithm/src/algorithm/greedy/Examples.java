@@ -15,7 +15,7 @@ public class Examples {
 	private static int totalCount = 0;
 	private static int price = 0;
 	
-	private static synchronized void increase(int x) {
+	private static void increase(int x) {
 		int cnt = price / x;
 		totalCount += cnt;
 		price -= x * cnt;
@@ -27,7 +27,7 @@ public class Examples {
 	private static double getValue(Entry<Integer, Integer> entry) {
 		return entry.getValue() / (double)entry.getKey();
 	}
-	private static synchronized void increase(Entry<Integer, Integer> entry) {
+	private static void increase(Entry<Integer, Integer> entry) {
 		int k = entry.getKey();
 		int v = entry.getValue();
 		
