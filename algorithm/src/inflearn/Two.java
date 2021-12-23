@@ -12,9 +12,11 @@ public class Two {
 				AB[idx++] = scanner.nextInt();
 			}
 		}
+		
 		int A = AB[0];
 		int B = AB[1];
 		int sum = 0;
+		
 		StringBuilder builder = new StringBuilder();
 		for(; A<=B; A++) {
 			builder.append(A);

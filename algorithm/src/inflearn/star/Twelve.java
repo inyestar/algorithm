@@ -24,6 +24,14 @@ public class Twelve {
 			
 			System.out.println(cnt);
 			
+			/*
+			 *    1 -    9 : 1 * 9
+			 *   10 -   99 : 2 * 90
+			 *  100 -  999 : 3 * 900
+			 * 1000 - 9999 : 4 * 9000
+			 * ...
+			 */
+			
 			int sum = 0;
 			int d = 9;
 			int c = 1;

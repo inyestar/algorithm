@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Three {
 
+	// 진약수 : 자기 자신을 포함하지 않은 약수
 	public static void main(String[] args) {
 
 		try(Scanner scanner = new Scanner(System.in)) {
@@ -22,6 +23,7 @@ public class Three {
 //			builder.deleteCharAt(builder.length() - 1);
 			String result = builder.append("=").append(sum).toString();
 			System.out.println(result);
+			
 		}
 	}
 

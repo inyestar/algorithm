@@ -9,11 +9,9 @@ public class One {
 			
 			int cnt = 0;
 			int[] nm = new int[2];
-			while(scanner.hasNextInt()) {
-				nm[cnt] = scanner.nextInt();
-				if(++cnt == 2) {
-					break;
-				}
+			
+			while(cnt < nm.length) {
+				nm[cnt++] = scanner.nextInt();
 			}
 			
 			int n = nm[0];
