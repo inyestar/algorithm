@@ -1,4 +1,4 @@
-package algorithm.recursive;
+package algorithm.recursive.old;
 
 public class Palindrome {
 	
